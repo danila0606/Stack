@@ -1,20 +1,26 @@
-#include "stack.h"
+#include "funtions.cpp"
 
 using namespace std;
 
 int main() {
-    Stack <int> *si;
-    si = stack_create<int>(STACK_SIZE);
+    Stack <int> S;
 
-    stack_push <int>(si,10);
-    stack_push <int>(si,100);
-    stack_push <int>(si,1000);
 
-    cout<<stack_pop(si)<<endl;
-    cout<<stack_pop(si)<<endl;
-    cout<<stack_pop(si)<<endl;
-    cout<<stack_pop(si)<<endl;
+    S.Create (3);
 
-    stack_destroy(si);
+    S.Push (9);
+    S.Push (12);
+    S.Push (5);
+
+
+    cout << S.Pop() << endl;
+    cout << S.Pop() << endl;
+    cout << S.Pop() << endl;
+    cout << S.Pop() << endl;
+
+
+   S.Destruct();
 }
+
+
 
